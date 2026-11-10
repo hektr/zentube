@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #f8fafc;
+      --text-primary: #0f172a;
+      --text-secondary: #64748b;
+      --border: #e2e8f0;
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --radius: 8px;
+    }
+
+    body {
+      width: 300px;
+      padding: 20px;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-primary);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    h2 {
+      margin: 0 0 20px 0;
+      font-size: 18px;
+      font-weight: 700;
+      text-align: center;
+      color: var(--text-primary);
+      letter-spacing: -0.025em;
+    }
+
+    .setting-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .setting-item:last-of-type {
+      border-bottom: none;
+    }
+
+    .setting-label {
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+
+    .setting-desc {
+      font-size: 12px;
+      color: var(--text-secondary);
+      margin-top: 2px;
+    }
+
+    /* Custom Toggle Switch */
+    .toggle {
+      position: relative;
+      display: inline-block;
+      width: 44px;
+      height: 24px;
+    }
+
+    .toggle input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: var(--border);
+      transition: .3s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: .3s;
+      border-radius: 50%;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    }
+
+    input:checked + .slider {
+      background-color: var(--primary);
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(20px);
+    }
+    
+    .divider {
+      height: 1px;
+      background-color: var(--border);
+      margin: 24px 0 16px 0;
+    }
+
+    .support-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 10px;
+      background-color: transparent;
+      color: var(--text-secondary);
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 13px;
+      transition: all 0.2s ease;
+      box-sizing: border-box;
+    }
+
+    .support-link:hover {
+      background-color: #fff7ed;
+      color: #ea580c;
+      border-color: #fdba74;
+      border-style: solid;
+      transform: translateY(-1px);
+    }
+
+    .support-link svg {
+      margin-right: 8px;
+      transition: transform 0.2s ease;
+    }
+
+    .support-link:hover svg {
+      transform: scale(1.1);
+      fill: #ffedd5;
+    }
+  </style>
+</head>
+<body>
+  <h2>ZenTube</h2>
+  
+  <div class="setting-item">
+    <div>
+      <div class="setting-label">Hide Shorts</div>
+      <div class="setting-desc">Remove Shorts shelves from feed</div>
+    </div>
+    <label class="toggle">
+      <input type="checkbox" id="toggleShorts">
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <div class="setting-item">
+    <div>
+      <div class="setting-label">Hide Sidebar</div>
+      <div class="setting-desc">Remove recommended videos during playback</div>
+    </div>
+    <label class="toggle">
+      <input type="checkbox" id="toggleSidebar">
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <div class="setting-item">
+    <div>
+      <div class="setting-label">Hide Comments</div>
+      <div class="setting-desc">Prevent endless scrolling in comments</div>
+    </div>
+    <label class="toggle">
+      <input type="checkbox" id="toggleComments">
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <div class="divider"></div>
+  <a href="https://boosty.to/hektr992" target="_blank" rel="noopener noreferrer" class="support-link">
+    Support the developer
+  </a>
+
+  <script src="popup.js"></script>
+</body>
+</html>

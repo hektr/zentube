@@ -1,0 +1,22 @@
+/* Hide Shorts shelves on homepage and search */
+body.zentube-hide-shorts ytd-rich-shelf-renderer[is-shorts],
+body.zentube-hide-shorts ytd-reel-shelf-renderer {
+  display: none !important;
+}
+
+/* Hide right sidebar (recommended videos) during playback */
+body.zentube-hide-sidebar ytd-watch-flexy #secondary,
+body.zentube-hide-sidebar ytd-watch-next-secondary-results-renderer {
+  display: none !important;
+}
+
+/* Expand main video player to full width when sidebar is hidden */
+body.zentube-hide-sidebar ytd-watch-flexy #primary {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Hide comments section */
+body.zentube-hide-comments ytd-comments {
+  display: none !important;
+}
