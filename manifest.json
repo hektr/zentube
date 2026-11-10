@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "ZenTube",
-  "version": "1.1",
-  "description": "Remove Shorts, sidebar, and comments from YouTube to keep you focused and break the infinite scrolling cycle",
+  "version": "1.3",
+  "description": "Hide YouTube Shorts, sidebar, and comments to keep you focused and break the infinite scrolling cycle",
   "author": "hektr992",
   "homepage_url": "https://github.com/hektr/zentube",
   "action": {
