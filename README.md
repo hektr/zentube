@@ -14,6 +14,13 @@ A simple, private, and efficient browser extension for Google Chrome and Chromiu
 </div>
 
 ---
+## Screenshots
+
+<div align="center">
+  <img src="zentube.png" alt="Zentube" width="480"/>
+</div>
+
+---
 
 ## Features
 
